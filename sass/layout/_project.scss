@@ -1,0 +1,90 @@
+.project{
+    @extend %section;
+}
+
+.project-filter__list {
+    @extend %reset-list;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    gap: 8px;
+    justify-content: center;
+}
+
+
+.project-filter__button {
+    @include fonts(16px, 500, 1.625);
+    padding: 6px 22px;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    color: $title-text-cl;
+    background-color: $portfolio-btn-cl;
+    transition: color $transition, background-color $transition, filter $transition;
+
+    &:hover,
+    &:focus {
+        color: $primery-bg-cl;
+        background-color: $accent-cl;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+.project__list{
+    @extend %reset-list;
+    @include card-set;
+}
+.project__item{
+    @include card-item;
+}
+.project__link {
+    @extend %reset-link;
+
+    background-color: $primery-bg-cl;
+    transition: filter $transition;
+
+    &:hover, &:focus {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+}
+.project__content {
+    padding: 20px 24px;
+    border: 1px solid #ECECEC;
+}
+
+.project__title {
+    @include fonts(18px, 700, 2, 0.06em);
+    margin-bottom: 4px;
+    color: $title-text-cl;
+}
+
+.project__label {
+    @include fonts(16px, null, 1.875);
+}
+
+.project__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.project__description {
+    @include fonts(18px, null, 1.555);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    top: 0;
+    left: 0;
+    color: $primery-bg-cl;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(+100%);
+    transition: transform $transition;
+
+    .project__link:hover &,
+    .project__link:focus & {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,20 @@
+@mixin card-set($card-gap: 30px){
+    display: flex;
+    flex-wrap: wrap;
+    gap: $card-gap;
+}
+
+@mixin card-item ($card-item:3, $card-gep:30px){
+    flex-basis: calc((100% - #{$card-gep} * (#{$card-item} - 1)) / #{$card-item});
+}
+@mixin fonts($fs: 14px, $fw: 400, $lh: 1.714, $ls: 0.03em) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+@mixin centered-flex() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

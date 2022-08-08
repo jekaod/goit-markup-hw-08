@@ -1,0 +1,22 @@
+.address {
+
+    color: rgba(255, 255, 255, 0.6);
+    font-style: inherit;
+}
+.address__list{
+    @extend %reset-list;
+}
+.address__link {
+    @extend %reset-link;
+
+    color: $primery-bg-cl;
+    transition: color $transition;
+
+    &:hover, &:focus {
+    color: $accent-cl
+}
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}

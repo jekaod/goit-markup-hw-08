@@ -1,0 +1,91 @@
+.modal {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $transition;
+    border-radius: 4px;
+    min-height: 581px;
+    min-width: 528px;
+    background-color: $primery-bg-cl;
+
+    .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+}
+
+.modal-cl-btn {
+    @include centered-flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $primery-bg-cl;
+    cursor: pointer;
+    transition: fill $transition, border $transition;
+
+    &:hover, &:focus {
+    fill: $accent-cl;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}   
+}
+.modal-form__title {
+    @include fonts(20px, 700, 1.15);
+    margin-bottom: 12px;
+    text-align: center;
+    color: $title-text-cl;
+}
+
+.field {
+    @include centered-flex;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+
+.field__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    transition: border $transition;
+}
+
+.field__icon {
+
+    margin-right: 9px;
+    border-radius: 4px;
+    border: 2px solid $title-text-cl;
+    transition: border $transition;
+
+    .field__input:hover~&,
+    .field__input:focus~& {
+        border: 2px solid $accent-cl;
+    }
+
+    .field__input:checked+& {
+
+        background-color: $accent-cl;
+        background-position: center;
+        border: 2px solid $accent-cl;
+        transition: fill $transition;
+
+    }
+}
+
+.field__link {
+        color: $accent-cl;
+}

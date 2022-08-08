@@ -1,0 +1,21 @@
+.logo{
+    @extend %reset-link;
+    @include fonts(26px, 700, 1.192);
+    display: block;
+    color: $accent-cl;
+    font-family: Raleway,cursive;
+    text-decoration: none;
+
+    &--black {
+            color: $title-text-cl;
+        }
+    &--white {
+            color: $primery-bg-cl;
+        
+                }
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    display: block;
+}

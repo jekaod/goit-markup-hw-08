@@ -1,0 +1,29 @@
+.page-work {
+    @extend %section;
+}
+
+.page-work__list{
+    @extend %reset-list;
+    @include card-set;
+}
+.page-work__item{
+    @include card-item;
+}
+.page-work__thumb {
+    position: relative;
+}
+
+.page-work__label {
+    @include fonts(null, 700, 1.142);
+       
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 100%; 
+    text-transform: uppercase;
+    text-align: center;
+    color: $primery-bg-cl;
+    background: rgba(47, 48, 58, 0.8);
+
+}

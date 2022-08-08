@@ -1,0 +1,21 @@
+.button {
+    @include fonts(16px, 700, 1.88, 0.06em);
+    @include centered-flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+    min-width: 200px;
+    border: none;
+    background-color: $accent-cl;
+    color: $primery-bg-cl;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color $transition;
+    &:hover, &:focus {
+    background-color: $hoverbtn-bg-cl;
+
+}
+}
+

@@ -1,0 +1,28 @@
+.page-client{
+    @extend %section;
+}
+
+
+.page-client__list {
+    @extend %reset-list;
+    @include card-set;
+}
+.page-client__item{
+    @include card-item(6);
+}
+.page-client__link {
+    @include centered-flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $social-icon-cl;
+    border-radius: 4px;
+    fill: $social-icon-cl;
+    transition: fill $transition, background-color $transition, border-color $transition;
+    
+    &:hover, &:focus {
+    fill: $accent-cl;
+    border-color: $accent-cl;
+    background-color: $primery-bg-cl;
+}
+}
+

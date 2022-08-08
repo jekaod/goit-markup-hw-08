@@ -1,0 +1,23 @@
+.social-list {
+    @extend %reset-list;
+    @include card-set(10px);
+}
+.social-list__item{
+    @include card-item(4, 10px)
+}
+
+.social-list__link {
+    @extend %reset-link;
+    @include centered-flex;
+    width: 44px;
+    height: 44px;
+    fill: $social-icon-cl;
+    background-color: $primery-bg-cl;
+    border-radius: 50%;
+    transition: fill $transition, background-color $transition;
+    &:hover, &:focus {
+    fill: $primery-bg-cl;
+    background-color: $accent-cl; 
+}
+
+}
