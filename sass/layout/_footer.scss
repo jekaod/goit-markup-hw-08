@@ -1,33 +1,52 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @include section;
+    @include mq(desk) {
+    @include section(94px, 94px);
+    }
+    text-align: center;
     background-color: $footer-bg-cl;
 
 }
-
-.footer-container {
+.footer__container {
+    @include mq(desk){
     display: flex;
-    align-items: baseline;
+    align-items: baseline;  
+    }
+    
 }
-
+.footer__container-tab{
+    @include mq(noDesk) {
+    margin-bottom: 60px; 
+    }
+    @include mq(tab){
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    }
+}
 .footer-item:not(:last-child) {
-    margin-right: 70px;
+    @include mq(mob-only) {
+    margin-bottom: 60px;
+    }
+    @include mq(desk) {
+    margin-right: 70px; 
+    }  
 }
 
 .footer-item:last-child {
+    @include mq(desk) {
     margin-left: auto;
+    }
+    
 }
-
 .footer-item__title {
-    @include fonts(14px , 700, 1.142);
+    @include fonts(null, 700, 1.142);
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $primery-bg-cl;
 
 }
-
 .footer-item__link {
-
     fill: $primery-bg-cl;
     background-color: #44454E;
     transition: filter $transition, background-color $transition;
@@ -39,3 +58,43 @@
     }
 }
 
+
+.footer-form {
+    align-items: center;
+    @include mq(desk){
+    display: flex;
+    }
+}
+
+.footer-form__input {
+    @include fonts(16px, null, 1.25);
+    @include mq(noDesk) {
+    margin-bottom: 20px;
+    }
+    padding: 12px 12px;
+    width: 100%;
+    height: 50px;
+    @include mq(tab-only) {
+    width: 450px;
+    }
+    @include mq(desk) {
+    width: 358px;
+     margin-right: 12px;
+    }
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: $portfolio-bg-cl;
+    background-color: transparent;
+    outline: transparent;
+    transition: border $transition;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $accent-cl
+    }
+}
+.footer-form__icon {
+    margin-left: 10px;
+    align-items: center;
+}

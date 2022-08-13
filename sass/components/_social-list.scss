@@ -1,8 +1,10 @@
 .social-list {
     @extend %reset-list;
     @include card-set(10px);
+    display: inline-flex;
 }
 .social-list__item{
+    
     @include card-item(4, 10px)
 }
 

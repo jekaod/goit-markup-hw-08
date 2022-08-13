@@ -1,5 +1,4 @@
 .address {
-
     color: rgba(255, 255, 255, 0.6);
     font-style: inherit;
 }
@@ -8,7 +7,6 @@
 }
 .address__link {
     @extend %reset-link;
-
     color: $primery-bg-cl;
     transition: color $transition;
 
@@ -16,7 +14,9 @@
     color: $accent-cl
 }
 }
-
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include mq(desk){
+        margin-bottom: 9px;
+    }
 }

@@ -1,6 +1,18 @@
 .page-header__container{
+   
     @include fonts(null, 500, 1.14, 0.02em);
     display: flex;
     align-items: center;
     border-bottom: 1px solid#ECECEC;  
+
+    .site-nav {
+    @include mq(mob-only) {
+    display: none;
+    }
+    }
+    .contact {
+    @include mq(mob-only) {
+    display: none;
+    }
+    }
 }

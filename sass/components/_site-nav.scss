@@ -1,38 +1,51 @@
 .site-nav{
+    @include mq(tab){
     display: flex;
-    align-items: center;
+    align-items: center; 
+    }
+    @include mq(mob-only) {
+    margin-bottom: auto;
+    }
 }
 
 
 .site-nav__list {
     @extend %reset-list;
-
+    @include mq(tab) {
     display: flex;
     padding-left: 0;
-    margin-left: 93px;
+    margin-left: 93px;   
+    }
+    
 }
 
 .site-nav__item + .site-nav__item {
-    margin-left: 50px;
+    @include mq(mob-only) {
+    margin-top: 32px;
+    }
+    @include mq(tab) {
+    margin-left: 50px;      
+    }
+    
 }
 
 .site-nav__link {
     @extend %reset-link;
-
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: $title-text-cl;
     transition: $transition;
     &:hover,
     &:focus {
     color: $accent-cl;
-}
+    }
 
+    @include mq(tab) {
+    display: block;    
+    padding-top: 32px;
+    padding-bottom: 32px;
     &--current {
     position: relative;
     color: $accent-cl;
-}
+    }
     &--current::after{
     content: "";
     position: absolute;
@@ -43,7 +56,9 @@
     bottom: -1px;
     border-radius: 2px;
     background-color: $accent-cl;
-}
+    }  
+    }
+
 }
 
 

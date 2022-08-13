@@ -1,5 +1,8 @@
 .page-work {
-    @extend %section;
+    @include mq(noDesk){
+    display: none;   
+    }
+    @include section(0, 94px)
 }
 
 .page-work__list{
@@ -7,7 +10,7 @@
     @include card-set;
 }
 .page-work__item{
-    @include card-item;
+    @include card-item(3);
 }
 .page-work__thumb {
     position: relative;
@@ -15,7 +18,6 @@
 
 .page-work__label {
     @include fonts(null, 700, 1.142);
-       
     position: absolute;
     bottom: 0;
     padding-top: 27px;

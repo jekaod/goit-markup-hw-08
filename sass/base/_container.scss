@@ -3,6 +3,23 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
+    width: 100%;
+    
+    @include mq (mob) {
+        width: 480px;
+    }
 
+    @include mq (tab) {
+        width: 768px;
+    }
+
+    @include mq (desk) {
+        width: 1200px;
+    }
 }
+
+
+
+
+
+

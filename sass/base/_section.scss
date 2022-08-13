@@ -1,6 +1,10 @@
 .section-title {
     @include fonts(36px, 700, 1.166);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
     color: $title-text-cl;
+
+    @include mq(desk){
+        margin-bottom: 50px;
+    }
 }

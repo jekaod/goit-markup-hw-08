@@ -8,6 +8,7 @@
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity $transition, visibility $transition;
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {

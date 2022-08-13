@@ -1,18 +1,25 @@
 .page-client{
-    @extend %section;
+    @include section;
+    @include mq(desk) {
+    @include section(94px, 94px);
+    }
 }
-
-
 .page-client__list {
     @extend %reset-list;
     @include card-set;
 }
 .page-client__item{
+    @include card-item(2);
+    @include mq(tab) {
+    @include card-item(3);
+    }
+    @include mq(desk) {
     @include card-item(6);
+    }
 }
 .page-client__link {
     @include centered-flex;
-    width: 170px;
+    width: auto;
     height: 92px;
     border: 1px solid $social-icon-cl;
     border-radius: 4px;

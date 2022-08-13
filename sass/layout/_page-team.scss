@@ -1,19 +1,37 @@
 .page-team {
-    @extend %section;
+    @include section;
+    @include mq(desk) {
+    @include section(94px, 94px);
+    }
     background-color: $portfolio-btn-cl;
 }
 .page-team__list{
     @extend %reset-list;
+    @include mq(tab){
     @include card-set;
+    }
 }
 .page-team__item {
+    @include mq(tab) {
+    @include card-item(2);   
+    }
+    @include mq(desk) {
     @include card-item(4);
+    }
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-
+.page-team__item:not(:last-child){
+   @include mq(mob-only){
+    margin-bottom: 30px;
+    } 
+}
 .page-team__content {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    @include mq(desk) {
     padding: 30px;
+    }
     text-align: center;
     background-color: $primery-bg-cl;
 }

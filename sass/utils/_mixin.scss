@@ -4,17 +4,66 @@
     gap: $card-gap;
 }
 
-@mixin card-item ($card-item:3, $card-gep:30px){
+@mixin card-item ($card-item:1, $card-gep:30px){
     flex-basis: calc((100% - #{$card-gep} * (#{$card-item} - 1)) / #{$card-item});
 }
+
+
 @mixin fonts($fs: 14px, $fw: 400, $lh: 1.714, $ls: 0.03em) {
     font-size: $fs;
     font-weight: $fw;
     line-height: $lh;
     letter-spacing: $ls;
 }
+@mixin section ($pt:60px, $pb: 60px){
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
 @mixin centered-flex() {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@mixin mq($range) {
+    $mob: 480px;
+    $tab: 768px;
+    $desk: 1200px;
+
+    @if $range==mob {
+    @media screen and (min-width: $mob) {
+    @content;
+    }
+    }
+
+    @if $range==tab {
+    @media screen and (min-width: $tab) {
+    @content;
+    }
+    }
+
+    @if $range==desk {
+    @media screen and (min-width: $desk) {
+    @content;
+    }
+    }
+
+    @if $range==noDesk {
+    @media (max-width:#{$desk - 0.02}) {
+    @content;
+    }
+    }
+    @if $range==tab-only {
+    @media (min-width:$tab) and (max-width:#{$desk - 0.02}) {
+    @content;
+    }
+    }
+    @if $range==mob-only {
+    @media (max-width:#{$tab - 0.02}) {
+    @content;
+    }
+    }
+
 }

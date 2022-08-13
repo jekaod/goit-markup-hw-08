@@ -1,15 +1,24 @@
 .project{
-    @extend %section;
+    @include section;
+    @include mq(desk) {
+    @include section(94px, 94px);
+    }
 }
 
 .project-filter__list {
     @extend %reset-list;
-
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     gap: 8px;
+
+    @include mq(tab){
     justify-content: center;
+    margin-bottom: 30px;
+    }
+    @include mq(desk) {
+    margin-bottom: 50px;
+    }
 }
 
 
@@ -27,9 +36,9 @@
 
     &:hover,
     &:focus {
-        color: $primery-bg-cl;
-        background-color: $accent-cl;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: $primery-bg-cl;
+    background-color: $accent-cl;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 }
 .project__list{
@@ -38,6 +47,13 @@
 }
 .project__item{
     @include card-item;
+    @include mq(tab){
+    @include card-item(2);
+    }
+    @include mq(desk) {
+    @include card-item(3);
+    }
+    
 }
 .project__link {
     @extend %reset-link;
