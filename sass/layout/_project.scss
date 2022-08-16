@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
-    gap: 8px;
+    gap: 15px 8px;
 
     @include mq(tab){
     justify-content: center;
@@ -57,7 +57,9 @@
 }
 .project__link {
     @extend %reset-link;
-
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: $primery-bg-cl;
     transition: filter $transition;
 
@@ -67,6 +69,7 @@
 }
 }
 .project__content {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid #ECECEC;
 }
@@ -94,13 +97,16 @@
     padding: 63px 24px;
     top: 0;
     left: 0;
+    overflow: auto;
+    opacity: 0;
     color: $primery-bg-cl;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(+100%);
-    transition: transform $transition;
+    transition: transform $transition, opacity $transition;
 
     .project__link:hover &,
     .project__link:focus & {
-        transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
     }
 }

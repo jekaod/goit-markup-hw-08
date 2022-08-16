@@ -3,38 +3,38 @@
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
     rgba(47, 48, 58, 0.4)),
-    url(../imeges/Overlay/img@1x_mob.jpg);
+    url(../imeges/Overlay/img@1x_mob.webp);
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: linear-gradient(to right,
             rgba(0, 0, 0, 0.4),
-            rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_mob.jpg');
+            rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_mob.webp');
     } 
 
     @include mq(tab-only) {
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
-    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@1x_tab.jpg');
+    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@1x_tab.webp');
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
-    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_tab.jpg');   
+    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_tab.webp');   
     }
     }
 
-        @media screen and (max-width: $desk) {
+        @media screen and (max-width: desk) {
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
-    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@1x_desk.jpg');
+    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@1x_desk.webp');
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
-    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_desk.jpg');
+    rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@2x_desk.webp');
     }
     }
 

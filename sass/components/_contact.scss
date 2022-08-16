@@ -18,7 +18,11 @@
   }
    
 }
-
+.contact__item{
+    @include mq(tab-only){
+        @include fonts(12px, 500, 1.166)
+    }
+}
 .contact__item + .contact__item {
     @include mq(mob-only) {
     margin-bottom: 32px;

@@ -1,12 +1,15 @@
 .page-header__container{
-   
+    @include mq(mob-only) {
+    padding: 10px;
+    }
     @include fonts(null, 500, 1.14, 0.02em);
     display: flex;
     align-items: center;
+    
     border-bottom: 1px solid#ECECEC;  
 
     .site-nav {
-    @include mq(mob-only) {
+    @include mq(mob-only) {   
     display: none;
     }
     }

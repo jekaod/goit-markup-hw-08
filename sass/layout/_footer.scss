@@ -1,33 +1,43 @@
 .footer {
     @include section;
+    @include mq(noDesk) {
+    text-align: center;
+    }    
     @include mq(desk) {
     @include section(94px, 94px);
     }
-    text-align: center;
+    
     background-color: $footer-bg-cl;
 
 }
 .footer__container {
-    @include mq(desk){
     display: flex;
+    @include mq(noDesk) {
+    flex-direction: column;    
+    gap: 60px;
+    }
+    @include mq(desk){
+    
     align-items: baseline;  
     }
     
 }
 .footer__container-tab{
-    @include mq(noDesk) {
-    margin-bottom: 60px; 
-    }
-    @include mq(tab){
     display: flex;
+    @include mq(noDesk) {
+    gap: 60px;
+    }
+    @include mq(mob-only) {
+    flex-direction: column;
+    }
+   
+    @include mq(tab){
     justify-content: space-around;
     align-items: baseline;
     }
 }
 .footer-item:not(:last-child) {
-    @include mq(mob-only) {
-    margin-bottom: 60px;
-    }
+    
     @include mq(desk) {
     margin-right: 70px; 
     }  
@@ -40,7 +50,7 @@
     
 }
 .footer-item__title {
-    @include fonts(null, 700, 1.142);
+    @include fonts(14px, 700, 1.142);
     margin-bottom: 20px;
     text-transform: uppercase;
     color: $primery-bg-cl;
