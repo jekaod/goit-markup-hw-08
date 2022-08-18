@@ -1,5 +1,8 @@
 .page-hero {
     position: relative;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
     rgba(47, 48, 58, 0.4)),
@@ -25,7 +28,7 @@
     }
     }
 
-        @media screen and (max-width: desk) {
+    @include mq(desk) {
     background-image: linear-gradient(to right,
     rgba(0, 0, 0, 0.4),
     rgba(47, 48, 58, 0.4)),url('../imeges/Overlay/img@1x_desk.webp');

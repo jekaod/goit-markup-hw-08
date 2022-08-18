@@ -770,6 +770,9 @@ img {
 
 .page-hero {
   position: relative;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../imeges/Overlay/img@1x_mob.webp);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url(../imeges/Overlay/img@1x_mob.webp);
   background-repeat: no-repeat;
@@ -801,14 +804,14 @@ img {
   }
 }
 
-@media screen and (max-width: desk) {
+@media screen and (min-width: 1200px) {
   .page-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../imeges/Overlay/img@1x_desk.webp");
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url("../imeges/Overlay/img@1x_desk.webp");
   }
 }
 
-@media screen and (max-width: desk) and (min-device-pixel-ratio: 2), screen and (max-width: desk) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: desk) and (min-resolution: 192dpi), screen and (max-width: desk) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .page-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../imeges/Overlay/img@2x_desk.webp");
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url("../imeges/Overlay/img@2x_desk.webp");
